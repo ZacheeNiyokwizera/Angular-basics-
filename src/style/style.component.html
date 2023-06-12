@@ -1,0 +1,38 @@
+<section>
+    <div> 
+    
+    <img src="https://travelshelper.com/wp-content/uploads/2021/11/Bujumbura-Travel-Guide-Travel-S-Helper.jpg" alt="About Us" class="about-image">
+    </div>
+    <div class="about-description">
+      <h1 [ngStyle]="{backgroundColor: getColor()}">Our Services</h1>
+      <p [ngStyle]="{online:serverStatus === 'online'}">About Us</p>
+
+      <form class="form-container" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="serviceInput">Service:</label>
+          <input id="serviceInput" class="form-control" type="text" [(ngModel)]="serviceName" name="service" required>
+        </div>
+        <div class="form-group">
+          <label for="descriptionInput">Service Description:</label>
+          <input id="descriptionInput" class="form-control" type="text" [(ngModel)]="serviceDescription" name="description" required>
+        </div>
+        <button class="btn-submit" type="submit">Add a Service</button>
+      </form>
+      
+
+      <div *ngFor="let serviceInfo of ourServices">
+      
+        <p>{{serviceInfo.service}}</p>
+        <p>{{serviceInfo.description}}</p>
+
+      </div>
+      <div>
+        <button class="btn btn-primary">Send me a DM</button>
+      </div>
+
+      <p>Welcome to my website! My name is and I'm We are a dedicated team committed to providing the best services and products for our customers. With years of experience and a passion for what we do, we strive to exceed expectations and deliver excellence.</p>
+      <p>Our mission is to create innovative solutions that meet your needs and enhance your experience. We value transparency, integrity, and customer satisfaction above all else. By focusing on these core principles, we aim to build long-lasting relationships with our clients.</p>
+      <p>Whether you are looking for professional advice, high-quality products, or reliable services, we are here to help. Our team of experts is always ready to assist you and provide personalized solutions tailored to your specific requirements.</p>
+      <p>Thank you for visiting our website. We look forward to serving you and being a part of your success story.</p>
+    </div>
+  </section>

@@ -1,0 +1,45 @@
+<div>
+
+    <h2>Template-Driven Form</h2>
+    <form #heroForm="ngForm">
+      <div [hidden]="heroForm.submitted">
+        <div class="cross-validation">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" class="form-control"
+                  required minlength="4" appForbiddenName="bob"
+                  [(ngModel)]="hero.name" #name="ngModel">
+  
+            <div *ngIf="name.invalid && (name.dirty || name.touched)"
+                class="alert">
+  
+              <div *ngIf="name.errors?.['required']">
+                Name is required.
+              </div>
+              <div *ngIf="name.errors?.['minlength']">
+                Name must be at least 4 characters long.
+              </div>
+              <div *ngIf="name.errors?.['forbiddenName']">
+                Name cannot be Bob.
+              </div>
+  
+            </div>
+          </div>
+
+      
+        </div>
+  
+
+  
+        <p>Complete the form to enable the Submit button.</p>
+        <button type="submit"
+                [disabled]="heroForm.invalid">Submit</button>
+       
+      </div>
+  
+      <div class="submitted-message" *ngIf="heroForm.submitted">
+        <p>You've submitted your hero, {{ heroForm.value.name }}!</p>
+        <button type="button" (click)="heroForm.resetForm({})">Add new hero</button>
+      </div>
+    </form>
+  </div>

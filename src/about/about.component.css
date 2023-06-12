@@ -1,0 +1,21 @@
+ /* CSS styles for the section, image, and description */
+ section {
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    padding: 40px;
+  }
+  .about-image {
+    max-width: 300px;
+    height: auto;
+  }
+  .about-description {
+    width: 60%;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+  }
