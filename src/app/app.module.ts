@@ -7,6 +7,7 @@ import { ServerComponent} from '../server/server.component';
 import { AboutComponent } from 'src/about/about.component';
 import { FormTemplateComponent} from 'src/form/hero-form-template.component';
 import { StyleComponent } from 'src/style/style.component';
+import { ServiceComponent } from 'src/services/service.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { StyleComponent } from 'src/style/style.component';
     ServerComponent,
     AboutComponent, 
     FormTemplateComponent,
-    StyleComponent
+    StyleComponent,
+    ServiceComponent
   ],
   imports: [
     BrowserModule,
