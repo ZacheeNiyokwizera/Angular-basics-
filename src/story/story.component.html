@@ -1,0 +1,16 @@
+<p>story works!</p>
+<div class="cards-container"> 
+<div *ngFor=" let story of stories" class="card">
+  <img src={{story.image}} alt={{story.name}} style="width:100%">
+  <h1>{{story.name}}</h1>
+  <p class="title">{{story.id}}</p>
+  <p>{{story.description}}</p>
+  <div style="margin: 24px 0;">
+    <a href="#"><i class="fa fa-dribbble"></i></a> 
+    <a href="#"><i class="fa fa-twitter"></i></a>  
+    <a href="#"><i class="fa fa-linkedin"></i></a>  
+    <a href="#"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><button>Contact</button></p>
+</div>
+</div>

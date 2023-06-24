@@ -8,6 +8,11 @@ import { AboutComponent } from 'src/about/about.component';
 import { FormTemplateComponent} from 'src/form/hero-form-template.component';
 import { StyleComponent } from 'src/style/style.component';
 import { ServiceComponent } from 'src/services/service.component';
+import { ChildComponent } from 'src/child/child.component';
+import { ParentComponent } from 'src/parent/parent.component';
+import { StoryComponent } from '../story/story.component';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +21,10 @@ import { ServiceComponent } from 'src/services/service.component';
     AboutComponent, 
     FormTemplateComponent,
     StyleComponent,
-    ServiceComponent
+    ServiceComponent,
+    ChildComponent,
+    ParentComponent,
+    StoryComponent
   ],
   imports: [
     BrowserModule,
