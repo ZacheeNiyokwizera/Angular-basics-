@@ -3,6 +3,7 @@
 <h2 style="text-align:center" >This the Service component</h2>
 
 <app-story [stories]="services"></app-story>
+<app-add-service (submitEvent)="receivedData($event)"></app-add-service>
 
 </section>
 

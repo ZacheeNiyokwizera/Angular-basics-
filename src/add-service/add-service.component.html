@@ -1,0 +1,28 @@
+<section class="addService">  
+
+    <div>
+
+<h2>Use this form to create a service </h2>
+
+    </div>
+<form (ngSubmit)="onSubmit(parentService)" #serviceForm="ngForm">
+    <div>
+      <label for="serviceId">Service Id:</label>
+      <input type="number" id="serviceId" name="id" [(ngModel)]="parentService.id" required>
+    </div>
+    <div>
+        <label for="serviceName">Service Name:</label>
+        <input type="text" id="serviceName" name="name" [(ngModel)]="parentService.name" required>
+      </div>
+    <div>
+      <label for="serviceDescription">Service Description:</label>
+      <textarea id="serviceDescription" name="description" [(ngModel)]="parentService.description" required></textarea>
+    </div>
+    <div>
+      <label for="serviceImage">Service Image URL:</label>
+      <input type="text" id="serviceImage" name="serviceImage" [(ngModel)]="parentService.image" required>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+  
+</section>

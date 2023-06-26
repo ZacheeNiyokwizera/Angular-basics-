@@ -11,6 +11,7 @@ import { ServiceComponent } from 'src/services/service.component';
 import { ChildComponent } from 'src/child/child.component';
 import { ParentComponent } from 'src/parent/parent.component';
 import { StoryComponent } from '../story/story.component';
+import { AddServiceComponent } from '../add-service/add-service.component';
 
 
 
@@ -24,7 +25,8 @@ import { StoryComponent } from '../story/story.component';
     ServiceComponent,
     ChildComponent,
     ParentComponent,
-    StoryComponent
+    StoryComponent,
+    AddServiceComponent
   ],
   imports: [
     BrowserModule,

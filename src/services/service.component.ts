@@ -21,4 +21,13 @@ export class ServiceComponent {
   ];
   @Input() message1!: string;
   constructor() {}
+
+
+  // this will receive the new added service and push it to the services array
+
+  receivedData(data: Object) {
+    console.log('Received data:', data);
+    console.log(this.services)
+    this.services.push(data as MyObject);
+  }
 }
